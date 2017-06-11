@@ -44,7 +44,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'Europe/Ljubljana'
+TIME_ZONE = 'Europe/Zagreb'
 
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
@@ -138,14 +138,14 @@ STATICFILES_FINDERS = (
 STATICFILES_STORAGE = 'nodewatcher.core.frontend.staticfiles.storage.FilesProcessorStorage'
 
 GEOIP_PATH = os.path.abspath(os.path.join(settings_dir, '..', 'libs', 'geoip'))
-DEFAULT_COUNTRY = 'SI'
+DEFAULT_COUNTRY = 'HR'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '1p)^zvjul0^c)v5*l!8^48g=ili!cn54^l)wl1avvu-x$==k7p'
 
 EMAIL_HOST = 'localhost'
 EMAIL_SUBJECT_PREFIX = '[nodewatcher] '
-DEFAULT_FROM_EMAIL = 'webmaster@example.net'
+DEFAULT_FROM_EMAIL = 'info@otvorenamreza.org'
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -613,7 +613,7 @@ LEAFLET_CONFIG = {
             '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         ),
     ],
-    'DEFAULT_CENTER': (46.05, 14.507),
+    'DEFAULT_CENTER': (44.819, 16.639),
     'DEFAULT_ZOOM': 8,
     'MIN_ZOOM': 3,
     'MAX_ZOOM': 18,
@@ -621,11 +621,11 @@ LEAFLET_CONFIG = {
 }
 
 NETWORK = {
-    'NAME': 'your network name',
-    'HOME': 'http://example.net',
-    'CONTACT': 'open@example.net',
-    'CONTACT_PAGE': 'http://example.net/contact',
-    'DESCRIPTION': 'open wireless network in your neighborhood',
+    'NAME': 'Otvorena mreža',
+    'HOME': 'https://www.otvorenamreza.org/',
+    'CONTACT': 'info@otvorenamreza.org',
+    'CONTACT_PAGE': 'https://www.otvorenamreza.org/javite-nam-se/',
+    'DESCRIPTION': 'Open wireless project of Croatia',
     'FAVICON_FILE': None,
     'LOGO_FILE': None,
 }
