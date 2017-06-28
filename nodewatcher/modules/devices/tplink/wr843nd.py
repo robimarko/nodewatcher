@@ -87,5 +87,84 @@ class TPLinkWR843NDv1(cgm_devices.DeviceBase):
         }
     }
 
+
+class TPLinkWR843NDv2(cgm_devices.DeviceBase):
+    """
+    TP-Link WR843NDv2 device descriptor.
+    """
+
+    identifier = 'tp-wr843ndv2'
+    name = "WR843ND (v2)"
+    manufacturer = "TP-Link"
+    url = 'http://www.tp-link.com/'
+    architecture = 'ar71xx'
+    radios = [
+        cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio"), [
+            cgm_protocols.IEEE80211BGN(
+                cgm_protocols.IEEE80211BGN.SHORT_GI_20,
+                cgm_protocols.IEEE80211BGN.SHORT_GI_40,
+                cgm_protocols.IEEE80211BGN.RX_STBC1,
+                cgm_protocols.IEEE80211BGN.DSSS_CCK_40,
+            )
+        ], [
+            cgm_devices.AntennaConnector('a1', "Antenna0")
+        ], [
+            cgm_devices.DeviceRadio.MultipleSSID,
+        ])
+    ]
+    antennas = [
+        # TODO: This information is probably not correct
+        cgm_devices.InternalAntenna(
+            identifier='a1',
+            polarization='horizontal',
+            angle_horizontal=360,
+            angle_vertical=75,
+            gain=2,
+        )
+    ]
+    switches = [
+        cgm_devices.Switch(
+            'sw0', "Switch0",
+            ports=5,
+            cpu_port=0,
+            vlans=1,
+            presets=[
+                cgm_devices.SwitchPreset('default', _("Default VLAN configuration"), vlans=[
+                    cgm_devices.SwitchVLANPreset(
+                        'lan0', "Lan0",
+                        vlan=1,
+                        ports=[0, 1, 2, 3, 4],
+                    )
+                ])
+            ]
+        )
+    ]
+    ports = [
+        cgm_devices.EthernetPort('wan0', "Wan0"),
+    ]
+    port_map = {
+        'openwrt': {
+            'wifi0': 'radio0',
+            'sw0': cgm_devices.SwitchPortMap('switch0', vlans='eth0'),
+            'wan0': 'eth1',
+        }
+    }
+    drivers = {
+        'openwrt': {
+            'wifi0': 'mac80211'
+        }
+    }
+    profiles = {
+        'lede': {
+            'name': 'tl-wr843nd-v2',
+            'files': [
+                '*-ar71xx-generic-tl-wr843nd-v2-squashfs-factory.bin',
+                '*-ar71xx-generic-tl-wr843nd-v2-squashfs-sysupgrade.bin',
+            ]
+        }
+    }
+
+
 # Register the TP-Link WR843ND device.
 cgm_base.register_device('openwrt', TPLinkWR843NDv1)
+cgm_base.register_device('lede', TPLinkWR843NDv2)
