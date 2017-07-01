@@ -383,7 +383,7 @@ class TPLinkWR841Nv13(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-wr841n-v13',
             'files': [
-                '*-ramips-mt7628-tl-wr841n-v13-squashfs-factory.bin',
+                '*-ramips-mt7628-tl-wr841n-v13-squashfs-tftp-recovery.bin',
                 '*-ramips-mt7628-tl-wr841n-v13-squashfs-sysupgrade.bin',
             ]
         }
