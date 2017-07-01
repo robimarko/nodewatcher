@@ -726,4 +726,4 @@ CORS_ALLOW_METHODS = (
 
 # Allowed hosts (required for production use, when DEBUG is false). Set it
 # to the (virtual HTTP) hostname under which you have nodewatcher installation.
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['94.176.235.78']
