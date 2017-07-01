@@ -74,7 +74,7 @@ class TPLinkWR840Nv4(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-wr840n-v4',
             'files': [
-                '*-ramips-mt7628-tl-wr840n-v4-squashfs-factory.bin',
+                '*-ramips-mt7628-tl-wr840n-v4-squashfs-tftp-recovery.bin',
                 '*-ramips-mt7628-tl-wr840n-v4-squashfs-sysupgrade.bin',
             ]
         }
