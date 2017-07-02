@@ -61,7 +61,7 @@ class TPLinkWR840Nv4(cgm_devices.DeviceBase):
     port_map = {
         'openwrt': {
             'wifi0': 'radio0',
-            'sw0': cgm_devices.SwitchPortMap('switch0', vlans='eth1'),
+            'sw0': cgm_devices.SwitchPortMap('switch0', vlans='eth6'),
             'wan0': 'eth0',
         }
     }
