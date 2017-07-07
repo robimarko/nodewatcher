@@ -54,7 +54,7 @@ class MikrotikRBSXT2nDr3(cgm_devices.DeviceBase):
     }
     profiles = {
         'lede': {
-            'name': 'ubnt-unifiac-lite',
+            'name': 'rb-nor-flash-16M',
             'files': [
                 '*-ar71xx-mikrotik-rb-nor-flash-16M-kernel.bin',
                 '*-ar71xx-mikrotik-rb-nor-flash-16M-squashfs-sysupgrade.bin',
