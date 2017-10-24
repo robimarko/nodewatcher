@@ -90,6 +90,34 @@ class TPLinkCPE210v1(cgm_devices.DeviceBase):
     }
 
 
+class TPLinkCPE210v2(TPLinkCPE210v1):
+    """
+    TP-Link CPE210 v2 device descriptor.
+    """
+
+    identifier = 'tp-cpe210-v2'
+    name = "CPE210 (v2)"
+    switches = []
+    ports = [
+        cgm_devices.EthernetPort('lan0', "Lan0")
+    ]
+    port_map = {
+        'openwrt': {
+            'wifi0': 'radio0',
+            'lan0': 'eth0',
+        }
+    }
+    profiles = {
+        'lede': {
+            'name': 'cpe210v2',
+            'files': [
+                '*-ar71xx-generic-cpe210v2-squashfs-factory.bin',
+                '*-ar71xx-generic-cpe210v2-squashfs-sysupgrade.bin',
+            ],
+        }
+    }
+
+
 class TPLinkCPE220v1(TPLinkCPE210v1):
     """
     TP-Link CPE220 v1 device descriptor.
