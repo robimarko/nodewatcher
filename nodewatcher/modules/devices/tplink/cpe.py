@@ -81,10 +81,10 @@ class TPLinkCPE210v1(cgm_devices.DeviceBase):
             ]
         },
         'lede': {
-            'name': 'cpe210-220',
+            'name': 'cpe210-220-v1',
             'files': [
-                '*-ar71xx-generic-cpe210-220-squashfs-factory.bin',
-                '*-ar71xx-generic-cpe210-220-squashfs-sysupgrade.bin'
+                '*-ar71xx-generic-cpe210-220-v1-squashfs-factory.bin',
+                '*-ar71xx-generic-cpe210-220-v1-squashfs-sysupgrade.bin'
             ]
         }
     }
@@ -122,10 +122,10 @@ class TPLinkCPE510v1(TPLinkCPE210v1):
     ]
     profiles = {
         'lede': {
-            'name': 'cpe510-520',
+            'name': 'cpe510-520-v1',
             'files': [
-                '*-ar71xx-generic-cpe510-520-squashfs-factory.bin',
-                '*-ar71xx-generic-cpe510-520-squashfs-sysupgrade.bin'
+                '*-ar71xx-generic-cpe510-520-v1-squashfs-factory.bin',
+                '*-ar71xx-generic-cpe510-520-v1-squashfs-sysupgrade.bin'
             ]
         }
     }
