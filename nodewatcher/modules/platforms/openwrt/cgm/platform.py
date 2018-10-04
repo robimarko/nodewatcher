@@ -37,4 +37,4 @@ class PlatformOpenWRT(cgm_base.PlatformBase):
         builder = self.builder_class(result, profile)
         return builder.build()
 
-cgm_base.register_platform('openwrt', _("OpenWRT"), PlatformOpenWRT())
+cgm_base.register_platform('openwrt', _("OpenWRT-legacy"), PlatformOpenWRT())

@@ -25,4 +25,4 @@ class PlatformLEDE(openwrt_platform.PlatformOpenWRT):
 
 
 # Register the LEDE platform and include all modules for OpenWRT platform.
-cgm_base.register_platform('lede', _("LEDE"), PlatformLEDE(), include=['openwrt'])
+cgm_base.register_platform('lede', _("OpenWrt"), PlatformLEDE(), include=['openwrt'])
