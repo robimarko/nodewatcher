@@ -12,7 +12,7 @@ class TPLinkCPE210v1(cgm_devices.DeviceBase):
     name = "CPE210 (v1)"
     manufacturer = "TP-Link"
     url = 'http://www.tp-link.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_generic'
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio"), [
             cgm_protocols.IEEE80211BGN(

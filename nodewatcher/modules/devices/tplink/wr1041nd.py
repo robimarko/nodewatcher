@@ -12,7 +12,7 @@ class TPLinkWR1041NDv2(cgm_devices.DeviceBase):
     name = "WR1041ND (v2)"
     manufacturer = "TP-Link"
     url = 'http://www.tp-link.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_tiny'
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio"), [
             cgm_protocols.IEEE80211BGN(

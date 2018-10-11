@@ -12,7 +12,7 @@ class TPLinkWDR4300v1(cgm_devices.DeviceBase):
     name = "WDR4300 (v1)"
     manufacturer = "TP-Link"
     url = 'http://www.tp-link.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_generic'
     usb = True
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio (2.4 GHz)"), [

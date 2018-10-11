@@ -12,7 +12,7 @@ class GLiNet6408Av1(cgm_devices.DeviceBase):
     name = "GL.iNet 6408A (v1)"
     manufacturer = "GL Technologies"
     url = 'http://www.gl-inet.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_generic'
     usb = True
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio"), [

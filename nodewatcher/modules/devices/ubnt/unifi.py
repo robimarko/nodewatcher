@@ -12,7 +12,7 @@ class UBNTUniFiAPACLite(cgm_devices.DeviceBase):
     name = "UniFi AP AC Lite"
     manufacturer = "Ubiquiti"
     url = 'http://www.ubnt.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_generic'
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio (5 GHz)"), [
             cgm_protocols.IEEE80211AC(
@@ -102,7 +102,7 @@ class UBNTUniFiAPACPro(cgm_devices.DeviceBase):
     name = "UniFi AP AC Pro"
     manufacturer = "Ubiquiti"
     url = 'http://www.ubnt.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_generic'
     usb = True
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio (5 GHz)"), [
@@ -205,7 +205,7 @@ class UBNTUniFiAP(cgm_devices.DeviceBase):
     name = "UniFi AP"
     manufacturer = "Ubiquiti"
     url = 'http://www.ubnt.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_generic'
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio (2.4 GHz)"), [
             cgm_protocols.IEEE80211BGN(

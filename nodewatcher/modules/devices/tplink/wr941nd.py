@@ -12,7 +12,7 @@ class TPLinkWR941NDv2(wr841nd.TPLinkWR841NDv1):
     name = "WR941ND (v2)"
     manufacturer = "TP-Link"
     url = 'http://www.tp-link.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_tiny'
     profiles = {
         'openwrt': {
             'name': 'TLWR941',

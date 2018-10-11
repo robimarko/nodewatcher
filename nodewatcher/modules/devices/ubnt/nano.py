@@ -12,7 +12,7 @@ class UBNTNanoM2(cgm_devices.DeviceBase):
     name = "Nanostation M2"
     manufacturer = "Ubiquiti"
     url = 'http://www.ubnt.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_generic'
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio"), [
             cgm_protocols.IEEE80211BGN(

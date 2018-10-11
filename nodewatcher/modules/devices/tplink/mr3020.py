@@ -12,7 +12,7 @@ class TPLinkMR3020v1(cgm_devices.DeviceBase):
     name = "MR3020 (v1)"
     manufacturer = "TP-Link"
     url = 'http://www.tp-link.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_tiny'
     usb = True
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio"), [

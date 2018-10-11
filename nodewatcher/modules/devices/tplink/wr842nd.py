@@ -12,7 +12,7 @@ class TPLinkWR842NDv1(cgm_devices.DeviceBase):
     name = "WR842ND (v1)"
     manufacturer = "TP-Link"
     url = 'http://www.tp-link.com/'
-    architecture = 'ar71xx'
+    architecture = 'ar71xx_generic'
     usb = True
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio"), [
