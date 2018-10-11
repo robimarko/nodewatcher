@@ -109,10 +109,10 @@ class TPLinkCPE210v2(TPLinkCPE210v1):
     }
     profiles = {
         'lede': {
-            'name': 'cpe210v2',
+            'name': 'cpe210-v2',
             'files': [
-                '*-ar71xx-generic-cpe210v2-squashfs-factory.bin',
-                '*-ar71xx-generic-cpe210v2-squashfs-sysupgrade.bin',
+                '*-ar71xx-generic-cpe210-v2-squashfs-factory.bin',
+                '*-ar71xx-generic-cpe210-v2-squashfs-sysupgrade.bin',
             ],
         }
     }
