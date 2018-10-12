@@ -38,7 +38,7 @@ sphinx-me==0.3
 wsgiref==0.1.2
 django-timezone-field==3.0
 paramiko==2.0.2
-django-leaflet==0.21.0
+django-leaflet==0.24.0
 django-countries==5.3.2
 requests==2.5.1
 unidecode==0.04.19
