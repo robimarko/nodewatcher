@@ -54,5 +54,24 @@ class UBNTEdgerouterX(cgm_devices.DeviceBase):
         }
     }
 
+
+class UBNTEdgerouterX_SFP(UBNTEdgerouterX):
+    """
+    UBNT EdgerouterX-SFP device descriptor.
+    """
+
+    identifier = 'ub-edgerouter-x-sfp'
+    name = "Edgerouter X-SFP"
+    profiles = {
+        'lede': {
+            'name': 'ubnt-erx-sfp',
+            'files': [
+                '*-ramips-mt7621-ubnt-erx-sfp-squashfs-sysupgrade.tar',
+            ]
+        }
+    }
+
+
 # Register Edgerouter X device.
 cgm_base.register_device('lede', UBNTEdgerouterX)
+cgm_base.register_device('lede', UBNTEdgerouterX_SFP)
