@@ -159,7 +159,7 @@ class WirelessModule(NetworkModuleMixin, registry_forms.FormDefaultsModule):
                     parent=wifi_radio,
                     configuration={
                         # Use 802.11s if checked, otherwise use ad-hoc.
-                        'mode': 'mesh11s' if wireless_mesh_type == '80211s' else 'mesh',
+                        'mode': 'mesh' if wireless_mesh_type == 'ad-hoc' else 'mesh11s',
                         'essid': get_project_ssid('mesh'),
                         'bssid': get_project_ssid('mesh', attribute='bssid'),
                         'routing_protocols': routing_protocols,

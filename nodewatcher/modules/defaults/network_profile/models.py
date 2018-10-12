@@ -19,7 +19,7 @@ class NetworkProfileConfig(registration.bases.NodeConfigRegistryItem):
     )
     wireless_mesh_type = registry_fields.RegistryChoiceField(
         'node.config', 'network.profile#wireless_mesh_type',
-        blank=True, null=True, default='ad-hoc',
+        blank=True, null=True, default='80211s',
         help_text=_("Type of interface that should be used for wireless meshihng.")
     )
 

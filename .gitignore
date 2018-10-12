@@ -2,6 +2,7 @@
 *.pyc
 *.rrd
 /nodewatcher/secrets.py
+/nodewatcher/settings.py
 /nodewatcher/*.xml
 /nodewatcher/*.json
 /docs/_build/
