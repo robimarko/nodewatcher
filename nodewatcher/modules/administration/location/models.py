@@ -18,7 +18,7 @@ class LocationConfig(registration.bases.NodeConfigRegistryItem):
 
     address = models.CharField(max_length=100, blank=True)
     city = models.CharField(max_length=100, blank=True)  # TODO: Autocomplete city field?
-    country = country_field.CountryField()
+    country = country_field.CountryField(default='HR')
     timezone = timezone_field.TimeZoneField(default='Europe/Zagreb')
     geolocation = gis_models.PointField(geography=True, null=True, blank=True)
     altitude = models.FloatField(default=0, help_text=_("In meters."))
