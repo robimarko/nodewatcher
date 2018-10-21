@@ -1,4 +1,4 @@
-FROM wlanslovenija/nodewatcher-base
+FROM robimarko/nodewatcher-base
 
 MAINTAINER Jernej Kos <jernej@kos.mx>
 
