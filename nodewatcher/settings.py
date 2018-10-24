@@ -321,6 +321,7 @@ INSTALLED_APPS += [
     'nodewatcher.modules.routing.babel',
     'nodewatcher.modules.authentication.public_key',
     'nodewatcher.modules.vpn.tunneldigger',
+    'nodewatcher.modules.vpn.eoip',
     'nodewatcher.modules.events.sinks.db_sink',
     'nodewatcher.modules.frontend.api',
     'nodewatcher.modules.frontend.display',
