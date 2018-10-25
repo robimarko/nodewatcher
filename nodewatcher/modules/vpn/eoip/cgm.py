@@ -16,7 +16,7 @@ def eoip_config(node, pkgcfg, cfg):
     try:
         pkgcfg = pkgcfg.get()
     except models.EOIPTunnelConfig.MultipleObjectsReturned:
-        raise cgm_base.ValidationError(_("Only one tunneldigger broker may be defined."))
+        raise cgm_base.ValidationError(_("Only one EOIP tunnel may be defined."))
 
     # Check if interface selected.
     if not pkgcfg.interface:
