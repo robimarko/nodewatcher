@@ -17,6 +17,11 @@ class EOIPTunnelConfig(cgm_models.PackageConfig):
     EOIP tunnel configuration.
     """
 
+    ip_options = (
+        ('-4', 'IPv4'),
+        ('-6', 'IPv6')
+    )
+    ip_family = models.CharField(max_length=5, choices=ip_options, default='-4', verbose_name=_("IP Family"))
     interface = registry_fields.ReferenceChoiceField(
         cgm_models.InterfaceConfig,
         related_name='+',

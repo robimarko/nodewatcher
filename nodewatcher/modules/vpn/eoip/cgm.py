@@ -26,6 +26,7 @@ def eoip_config(node, pkgcfg, cfg):
     # Configure EOIP tunnels.
 
     tunnel = cfg['eoip'].add('tunnel')
+    tunnel.ip_family = pkgcfg.ip_family
     tunnel.interface = eoip_interface.get_key()
     tunnel.local_ip = pkgcfg.local_ip
     tunnel.remote_ip = pkgcfg.remote_ip
