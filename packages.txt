@@ -1,5 +1,5 @@
-postgresql-client-9.5
-postgresql-server-dev-9.5
+postgresql-client-10
+postgresql-server-dev-10
 libxml2-dev
 libxslt-dev
 libpcre3-dev
