@@ -4,7 +4,12 @@ MAINTAINER Jernej Kos <jernej@kos.mx>
 
 # Update packages
 RUN apt-get update -q -q && \
-    apt-get install --no-install-recommends -y git python python-dev python-pip python-setuptools build-essential
+    apt-get install --no-install-recommends -y git python python-dev python-pip python-setuptools build-essential wget gnupg
+
+# Add PostgreSQL repo
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
+    apt-get update -q -q
 
 # Install code dependencies
 ADD ./packages.txt /code/packages.txt
