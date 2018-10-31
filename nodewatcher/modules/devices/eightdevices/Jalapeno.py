@@ -12,7 +12,7 @@ class eightdevicesJalapeno(cgm_devices.DeviceBase):
     name = "8devices Jalapeno"
     manufacturer = "8devices"
     url = 'https://www.8devices.com'
-    architecture = 'ipq40xx'
+    architecture = 'ipq40xx_generic'
     usb = True
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio (2.4 GHz)"), [
