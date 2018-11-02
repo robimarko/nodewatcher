@@ -231,7 +231,10 @@ def configure_interface(cfg, node, interface, section, iface_name):
         if not firewall:
             firewall = cfg.firewall.add('zone')
             firewall.name = 'uplink'
-            firewall.input = 'DROP'
+            if getattr(interface, 'accept_input_packages', None):
+                firewall.input = 'ACCEPT'
+            else:
+                firewall.input = 'DROP'
             firewall.output = 'ACCEPT'
             firewall.forward = 'REJECT'
 

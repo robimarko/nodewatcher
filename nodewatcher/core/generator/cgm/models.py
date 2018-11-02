@@ -198,6 +198,7 @@ class UplinkableInterface(models.Model):
         abstract = True
 
     uplink = models.BooleanField(default=False)
+    accept_input_packages = models.BooleanField(default=False, verbose_name=_("Accept input packages"))
     routing_default_announces = registry_fields.RegistryMultipleChoiceField(
         'node.config', 'core.interfaces.network#routing_announce',
         blank=True, null=True, verbose_name=_("Announce Default Route Via"), default=list,
