@@ -22,14 +22,16 @@ class EOIPTunnelConfig(cgm_models.PackageConfig):
         ('-6', 'IPv6')
     )
     ip_family = models.CharField(max_length=5, choices=ip_options, default='-4', verbose_name=_("IP Family"))
-    interface = registry_fields.ReferenceChoiceField(
-        cgm_models.InterfaceConfig,
+    bridge_interface = registry_fields.ReferenceChoiceField(
+        cgm_models.BridgeInterfaceConfig,
         related_name='+',
-        help_text=_("Select on which interface the broker should listen on."),
+        help_text=_("Select bridge to bind to"),
     )
+    interface = models.CharField(max_length=40, default="tap0", verbose_name=_("EOIP interface"))
     local_ip = models.GenericIPAddressField(null=True, unpack_ipv4=True, verbose_name=_("Local IP adress"))
     remote_ip = models.GenericIPAddressField(null=True, unpack_ipv4=True, verbose_name=_("Remote IP adress"))
     tunnel_id = models.PositiveIntegerField(default=0, verbose_name=_("Tunnel ID"))
+    custom_route = models.CharField(max_length=100, blank=True, verbose_name=_("Custom route to be executed"))
 
     class RegistryMeta(cgm_models.PackageConfig.RegistryMeta):
         registry_name = _("EOIP tunnel configuration")

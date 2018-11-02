@@ -19,18 +19,20 @@ def eoip_config(node, pkgcfg, cfg):
     if not pkgcfg.interface:
         raise cgm_base.ValidationError(_("EOIP must have a interface defined."))
 
-    eoip_interface = cfg.network.find_named_section('interface', _managed_by=pkgcfg.interface)
-    if not eoip_interface:
-        raise cgm_base.ValidationError(_("Configured EOIP interface not found."))
+    eoip_bridge = cfg.network.find_named_section('interface', _managed_by=pkgcfg.bridge_interface)
+    if not eoip_bridge:
+        raise cgm_base.ValidationError(_("Configured EOIP bridge not found."))
 
     # Configure EOIP tunnels.
 
     tunnel = cfg['eoip'].add('tunnel')
     tunnel.ip_family = pkgcfg.ip_family
-    tunnel.interface = eoip_interface.get_key()
+    tunnel.interface = pkgcfg.interface
+    tunnel.bridge = eoip_bridge.get_key()
     tunnel.local_ip = pkgcfg.local_ip
     tunnel.remote_ip = pkgcfg.remote_ip
     tunnel.tunnel_id = pkgcfg.tunnel_id
+    tunnel.custom_route = pkgcfg.custom_route
 
     # Ensure that "eoip" package is installed.
     cfg.packages.update(['eoip'])
