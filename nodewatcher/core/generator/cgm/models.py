@@ -320,11 +320,18 @@ class WifiInterfaceConfig(InterfaceConfig, RoutableInterface, UplinkableInterfac
     Wifi interface configuration.
     """
 
+    encryption_options = (
+        ('none', "Open"),
+        ('psk2', "WPA2-PSK")
+    )
+
     device = registry_fields.IntraRegistryForeignKey(
         WifiRadioDeviceConfig, editable=False, null=False, related_name='interfaces'
     )
 
     mode = registry_fields.RegistryChoiceField('node.config', 'core.interfaces#wifi_mode')
+    wlan_encryption = models.CharField(max_length=5, choices=encryption_options, default='none', verbose_name=_("WLAN encryption"))
+    wlan_key = models.CharField(max_length=64, blank=True, help_text="Needed only if WLAN encryption is not Open", verbose_name=_("WLAN key"))
     # For STA nodes, store (optional) where they are connected to.
     connect_to = models.ForeignKey(core_models.Node, blank=True, null=True, related_name='+')
     essid = models.CharField(max_length=50, null=True, verbose_name="ESSID")

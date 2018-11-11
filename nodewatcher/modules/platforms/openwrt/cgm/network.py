@@ -774,7 +774,11 @@ def network(node, cfg):
             for vif in interfaces:
                 wif = cfg.wireless.add('wifi-iface')
                 wif.device = wifi_radio
-                wif.encryption = 'none'
+                if vif.wlan_encryption == 'psk2':
+                    wif.encryption = 'psk2'
+                    wif.key = vif.wlan_key
+                else:
+                    wif.encryption = 'none'
                 wif.ssid = vif.essid
 
                 # We only allow automatic channel selection when all VIFs are in STA mode.
