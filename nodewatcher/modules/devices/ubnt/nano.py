@@ -198,6 +198,89 @@ class UBNTNanobridgeM2(UBNTLocoM2):
     identifier = 'ub-nanobridge-m2'
     name = "Nanobridge M2"
 
+
+class UBNTLoco5AC(cgm_devices.DeviceBase):
+    """
+    UBNT NanoStation Loco5AC device descriptor.
+    """
+
+    identifier = 'ub-loco-5ac'
+    name = "NanoStation Loco5AC"
+    manufacturer = "Ubiquiti"
+    url = 'http://www.ubnt.com/'
+    architecture = 'ath79_generic'
+    radios = [
+        cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio (5 GHz)"), [
+            cgm_protocols.IEEE80211AC(
+                cgm_protocols.IEEE80211AC.SHORT_GI_20,
+                cgm_protocols.IEEE80211AC.SHORT_GI_40,
+                cgm_protocols.IEEE80211AC.RX_STBC1,
+                cgm_protocols.IEEE80211AC.DSSS_CCK_40,
+            )
+        ], [
+            cgm_devices.AntennaConnector('a1', "Antenna1")
+        ], [
+            cgm_devices.DeviceRadio.MultipleSSID,
+        ]),
+        cgm_devices.IntegratedRadio('wifi1', _("Integrated wireless radio (2.4 GHz)"), [
+            cgm_protocols.IEEE80211BGN(
+                cgm_protocols.IEEE80211BGN.SHORT_GI_20,
+                cgm_protocols.IEEE80211BGN.SHORT_GI_40,
+                cgm_protocols.IEEE80211BGN.RX_STBC1,
+                cgm_protocols.IEEE80211BGN.DSSS_CCK_40,
+            )
+        ], [
+            cgm_devices.AntennaConnector('a2', "Antenna2")
+        ], [
+            cgm_devices.DeviceRadio.MultipleSSID,
+        ])
+    ]
+    switches = []
+    ports = [
+        cgm_devices.EthernetPort('lan0', "Lan0")
+    ]
+    antennas = [
+        # TODO: This information is probably not correct
+        cgm_devices.InternalAntenna(
+            identifier='a1',
+            polarization='horizontal',
+            angle_horizontal=360,
+            angle_vertical=75,
+            gain=2,
+        ),
+        # TODO: This information is probably not correct
+        cgm_devices.InternalAntenna(
+            identifier='a2',
+            polarization='horizontal',
+            angle_horizontal=360,
+            angle_vertical=75,
+            gain=2,
+        )
+    ]
+    port_map = {
+        'openwrt': {
+            'wifi0': 'radio0',
+            'wifi1': 'radio1',
+            'lan0': 'eth0',
+        }
+    }
+    drivers = {
+        'openwrt': {
+            'wifi0': 'mac80211',
+            'wifi1': 'mac80211',
+        }
+    }
+    profiles = {
+        'lede': {
+            'name': 'ubnt_nanostation-ac-loco',
+            'files': [
+                '*-ath79-generic-ubnt_nanostation-ac-loco-squashfs-factory.bin',
+                '*-ath79-generic-ubnt_nanostation-ac-loco-squashfs-sysupgrade.bin',
+            ]
+        }
+    }
+
+
 # Register the UBNT Nano devices.
 cgm_base.register_device('openwrt', UBNTNanoM2)
 cgm_base.register_device('openwrt', UBNTNanoM5)
@@ -207,3 +290,4 @@ cgm_base.register_device('openwrt', UBNTLocoM5)
 cgm_base.register_device('openwrt', UBNTLocoM5XW)
 cgm_base.register_device('openwrt', UBNTNanobridgeM5)
 cgm_base.register_device('openwrt', UBNTNanobridgeM2)
+cgm_base.register_device('lede', UBNTLoco5AC)
