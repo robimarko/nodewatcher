@@ -8,6 +8,7 @@ from django.utils.translation import ugettext_lazy as _, ugettext
 from polymorphic import models as polymorphic_models
 
 from nodewatcher.core import validators as core_validators
+from django.core.validators import MaxValueValidator, MinValueValidator 
 from nodewatcher.core.registry import fields as registry_fields, registration
 from nodewatcher.core.generator.cgm import models as cgm_models
 
