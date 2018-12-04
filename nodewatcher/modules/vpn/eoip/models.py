@@ -31,6 +31,7 @@ class EOIPTunnelConfig(cgm_models.PackageConfig):
     local_ip = models.GenericIPAddressField(null=True, unpack_ipv4=True, verbose_name=_("Local IP adress"))
     remote_ip = models.GenericIPAddressField(null=True, unpack_ipv4=True, verbose_name=_("Remote IP adress"))
     tunnel_id = models.PositiveIntegerField(default=0, verbose_name=_("Tunnel ID"))
+    mtu = models.PositiveIntegerField(default=1458, validators=[MinValueValidator(0), MaxValueValidator(9000)], verbose_name=_("MTU"))
     custom_route = models.CharField(max_length=100, blank=True, verbose_name=_("Custom route to be executed"))
 
     class RegistryMeta(cgm_models.PackageConfig.RegistryMeta):

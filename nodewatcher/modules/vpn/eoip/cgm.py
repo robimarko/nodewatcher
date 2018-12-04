@@ -32,6 +32,7 @@ def eoip_config(node, pkgcfg, cfg):
     tunnel.local_ip = pkgcfg.local_ip
     tunnel.remote_ip = pkgcfg.remote_ip
     tunnel.tunnel_id = pkgcfg.tunnel_id
+    tunnel.mtu = pkgcfg.mtu
     tunnel.custom_route = pkgcfg.custom_route
 
     # Ensure that "eoip" package is installed.
