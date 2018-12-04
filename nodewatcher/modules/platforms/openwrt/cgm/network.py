@@ -236,7 +236,10 @@ def configure_interface(cfg, node, interface, section, iface_name):
             else:
                 firewall.input = 'DROP'
             firewall.output = 'ACCEPT'
-            firewall.forward = 'REJECT'
+            if getattr(interface, 'accept_input_packages', None):
+                firewall.forward = 'ACCEPT'
+            else:
+                firewall.forward = 'REJECT'
 
             # Ensure DHCP client is allowed on the uplink interface.
             dhcp_rule = cfg.firewall.add('rule')
