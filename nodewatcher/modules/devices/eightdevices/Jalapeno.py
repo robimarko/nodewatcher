@@ -67,8 +67,8 @@ class eightdevicesJalapeno(cgm_devices.DeviceBase):
         'openwrt': {
             'wifi0': 'radio0',
             'wifi1': 'radio1',
-            'wan0': 'eth0',
-            'lan0': 'eth1',
+            'wan0': 'eth1',
+            'lan0': 'eth0',
         }
     }
     drivers = {
