@@ -81,8 +81,8 @@ class TPLinkWR740NDv1(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-wr740n-v1',
             'files': [
-                '*-ar71xx-generic-tl-wr740n-v1-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr740n-v1-squashfs-sysupgrade.bin'
+                '*-ar71xx-tiny-tl-wr740n-v1-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr740n-v1-squashfs-sysupgrade.bin'
             ]
         }
     }
@@ -106,8 +106,8 @@ class TPLinkWR740NDv3(TPLinkWR740NDv1):
         'lede': {
             'name': 'tl-wr740n-v3',
             'files': [
-                '*-ar71xx-generic-tl-wr740n-v3-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr740n-v3-squashfs-sysupgrade.bin'
+                '*-ar71xx-tiny-tl-wr740n-v3-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr740n-v3-squashfs-sysupgrade.bin'
             ]
         }
     }
@@ -131,8 +131,8 @@ class TPLinkWR740NDv4(TPLinkWR740NDv1):
         'lede': {
             'name': 'tl-wr740n-v4',
             'files': [
-                '*-ar71xx-generic-tl-wr740n-v4-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr740n-v4-squashfs-sysupgrade.bin'
+                '*-ar71xx-tiny-tl-wr740n-v4-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr740n-v4-squashfs-sysupgrade.bin'
             ]
         }
     }
@@ -156,8 +156,8 @@ class TPLinkWR740NDv5(TPLinkWR740NDv1):
         'lede': {
             'name': 'tl-wr740n-v5',
             'files': [
-                '*-ar71xx-generic-tl-wr740n-v5-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr740n-v5-squashfs-sysupgrade.bin'
+                '*-ar71xx-tiny-tl-wr740n-v5-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr740n-v5-squashfs-sysupgrade.bin'
             ]
         }
     }

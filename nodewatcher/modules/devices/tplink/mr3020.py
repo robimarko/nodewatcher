@@ -65,8 +65,8 @@ class TPLinkMR3020v1(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-mr3020-v1',
             'files': [
-                '*-ar71xx-generic-tl-mr3020-v1-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-mr3020-v1-squashfs-sysupgrade.bin'
+                '*-ar71xx-tiny-tl-mr3020-v1-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-mr3020-v1-squashfs-sysupgrade.bin'
             ]
         },
     }

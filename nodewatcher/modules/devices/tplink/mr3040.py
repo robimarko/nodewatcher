@@ -64,7 +64,8 @@ class TPLinkMR3040v1(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-mr3040-v1',
             'files': [
-                '*-ar71xx-generic-tl-mr3040-v1-squashfs-factory.bin'
+                '*-ar71xx-tiny-tl-mr3040-v1-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-mr3040-v1-squashfs-sysupgrade.bin'
             ]
         }
     }
@@ -88,8 +89,8 @@ class TPLinkMR3040v2(TPLinkMR3040v1):
         'lede': {
             'name': 'tl-mr3040-v2',
             'files': [
-                '*-ar71xx-generic-tl-mr3040-v2-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-mr3040-v2-squashfs-sysupgrade.bin'
+                '*-ar71xx-tiny-tl-mr3040-v2-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-mr3040-v2-squashfs-sysupgrade.bin'
             ]
         }
     }

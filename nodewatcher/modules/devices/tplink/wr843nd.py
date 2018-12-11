@@ -81,8 +81,8 @@ class TPLinkWR843NDv1(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-wr843nd-v1',
             'files': [
-                '*-ar71xx-generic-tl-wr843nd-v1-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr843nd-v1-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr843nd-v1-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr843nd-v1-squashfs-sysupgrade.bin',
             ]
         }
     }

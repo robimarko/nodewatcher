@@ -65,8 +65,8 @@ class TPLinkWR841NDv1(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-wr841-v1.5',
             'files': [
-                '*-ar71xx-generic-tl-wr841-v1.5-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr841-v1.5-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr841-v1.5-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr841-v1.5-squashfs-sysupgrade.bin',
             ]
         }
     }
@@ -100,8 +100,8 @@ class TPLinkWR841NDv3(TPLinkWR841NDv1):
         'lede': {
             'name': 'tl-wr841-v3',
             'files': [
-                '*-ar71xx-generic-tl-wr841-v3-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr841-v3-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr841-v3-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr841-v3-squashfs-sysupgrade.bin',
             ]
         }
     }
@@ -125,8 +125,8 @@ class TPLinkWR841NDv5(TPLinkWR841NDv1):
         'lede': {
             'name': 'tl-wr841-v5',
             'files': [
-                '*-ar71xx-generic-tl-wr841-v5-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr841-v5-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr841-v5-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr841-v5-squashfs-sysupgrade.bin',
             ]
         }
     }
@@ -177,8 +177,8 @@ class TPLinkWR841NDv7(TPLinkWR841NDv1):
         'lede': {
             'name': 'tl-wr841-v7',
             'files': [
-                '*-ar71xx-generic-tl-wr841-v7-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr841-v7-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr841-v7-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr841-v7-squashfs-sysupgrade.bin',
             ]
         }
     }
@@ -212,8 +212,8 @@ class TPLinkWR841NDv8(TPLinkWR841NDv7):
         'lede': {
             'name': 'tl-wr841-v8',
             'files': [
-                '*-ar71xx-generic-tl-wr841-v8-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr841-v8-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr841-v8-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr841-v8-squashfs-sysupgrade.bin',
             ]
         }
     }
@@ -237,8 +237,8 @@ class TPLinkWR841NDv9(TPLinkWR841NDv7):
         'lede': {
             'name': 'tl-wr841-v9',
             'files': [
-                '*-ar71xx-generic-tl-wr841-v9-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr841-v9-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr841-v9-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr841-v9-squashfs-sysupgrade.bin',
             ]
         }
     }
@@ -262,8 +262,8 @@ class TPLinkWR841NDv10(TPLinkWR841NDv7):
         'lede': {
             'name': 'tl-wr841-v10',
             'files': [
-                '*-ar71xx-generic-tl-wr841-v10-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr841-v10-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr841-v10-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr841-v10-squashfs-sysupgrade.bin',
             ]
         }
     }
@@ -287,8 +287,8 @@ class TPLinkWR841NDv11(TPLinkWR841NDv7):
         'lede': {
             'name': 'tl-wr841-v11',
             'files': [
-                '*-ar71xx-generic-tl-wr841-v11-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr841-v11-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr841-v11-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr841-v11-squashfs-sysupgrade.bin',
             ]
         }
     }
@@ -305,8 +305,8 @@ class TPLinkWR841NDv12(TPLinkWR841NDv7):
         'lede': {
             'name': 'tl-wr841-v12',
             'files': [
-                '*-ar71xx-generic-tl-wr841-v12-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr841-v12-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr841-v12-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr841-v12-squashfs-sysupgrade.bin',
             ]
         }
     }

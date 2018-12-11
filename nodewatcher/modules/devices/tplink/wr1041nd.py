@@ -82,8 +82,8 @@ class TPLinkWR1041NDv2(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-wr1041n-v2',
             'files': [
-                '*-ar71xx-generic-tl-wr1041n-v2-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr1041n-v2-squashfs-sysupgrade.bin',
+                '*-ar71xx-tiny-tl-wr1041n-v2-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr1041n-v2-squashfs-sysupgrade.bin',
             ],
         },
     }

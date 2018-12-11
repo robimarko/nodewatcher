@@ -81,8 +81,8 @@ class TPLinkWR743NDv1(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-wr743nd-v1',
             'files': [
-                '*-ar71xx-generic-tl-wr743nd-v1-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr743nd-v1-squashfs-sysupgrade.bin'
+                '*-ar71xx-tiny-tl-wr743nd-v1-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr743nd-v1-squashfs-sysupgrade.bin'
             ]
         }
     }
@@ -106,8 +106,8 @@ class TPLinkWR743NDv2(TPLinkWR743NDv1):
         'lede': {
             'name': 'tl-wr743nd-v2',
             'files': [
-                '*-ar71xx-generic-tl-wr743nd-v2-squashfs-factory.bin',
-                '*-ar71xx-generic-tl-wr743nd-v2-squashfs-sysupgrade.bin'
+                '*-ar71xx-tiny-tl-wr743nd-v2-squashfs-factory.bin',
+                '*-ar71xx-tiny-tl-wr743nd-v2-squashfs-sysupgrade.bin'
             ]
         }
     }
