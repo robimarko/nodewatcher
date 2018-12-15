@@ -12,7 +12,7 @@ class TPLinkWR1041NDv2(cgm_devices.DeviceBase):
     name = "WR1041ND (v2)"
     manufacturer = "TP-Link"
     url = 'http://www.tp-link.com/'
-    architecture = 'ar71xx_tiny'
+    architecture = 'ar71xx_tiny_17_01'
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio"), [
             cgm_protocols.IEEE80211BGN(
@@ -82,8 +82,8 @@ class TPLinkWR1041NDv2(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-wr1041n-v2',
             'files': [
-                '*-ar71xx-tiny-tl-wr1041n-v2-squashfs-factory.bin',
-                '*-ar71xx-tiny-tl-wr1041n-v2-squashfs-sysupgrade.bin',
+                '*-ar71xx-generic-tl-wr1041n-v2-squashfs-factory.bin',
+                '*-ar71xx-generic-tl-wr1041n-v2-squashfs-sysupgrade.bin',
             ],
         },
     }

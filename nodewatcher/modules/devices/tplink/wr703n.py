@@ -12,7 +12,7 @@ class TPLinkWR703Nv1(cgm_devices.DeviceBase):
     name = "WR703N (v1)"
     manufacturer = "TP-Link"
     url = 'http://www.tp-link.com/'
-    architecture = 'ar71xx_tiny'
+    architecture = 'ar71xx_tiny_17_01'
     usb = True
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio"), [
@@ -65,8 +65,8 @@ class TPLinkWR703Nv1(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-wr703n-v1',
             'files': [
-                '*-ar71xx-tiny-tl-wr703n-v1-squashfs-factory.bin',
-                '*-ar71xx-tiny-tl-wr703n-v1-squashfs-sysupgrade.bin'
+                '*-ar71xx-generic-tl-wr703n-v1-squashfs-factory.bin',
+                '*-ar71xx-generic-tl-wr703n-v1-squashfs-sysupgrade.bin'
             ]
         }
     }

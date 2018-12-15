@@ -12,7 +12,7 @@ class TPLinkWR941NDv2(wr841nd.TPLinkWR841NDv1):
     name = "WR941ND (v2)"
     manufacturer = "TP-Link"
     url = 'http://www.tp-link.com/'
-    architecture = 'ar71xx_tiny'
+    architecture = 'ar71xx_tiny_17_01'
     profiles = {
         'openwrt': {
             'name': 'TLWR941',
@@ -24,8 +24,8 @@ class TPLinkWR941NDv2(wr841nd.TPLinkWR841NDv1):
         'lede': {
             'name': 'tl-wr941nd-v2',
             'files': [
-                '*-ar71xx-tiny-tl-wr941nd-v2-squashfs-factory.bin',
-                '*-ar71xx-tiny-tl-wr941nd-v2-squashfs-sysupgrade.bin',
+                '*-ar71xx-generic-tl-wr941nd-v2-squashfs-factory.bin',
+                '*-ar71xx-generic-tl-wr941nd-v2-squashfs-sysupgrade.bin',
             ]
         }
     }
@@ -49,8 +49,8 @@ class TPLinkWR941NDv3(TPLinkWR941NDv2):
         'lede': {
             'name': 'tl-wr941nd-v3',
             'files': [
-                '*-ar71xx-tiny-tl-wr941nd-v3-squashfs-factory.bin',
-                '*-ar71xx-tiny-tl-wr941nd-v3-squashfs-sysupgrade.bin',
+                '*-ar71xx-generic-tl-wr941nd-v3-squashfs-factory.bin',
+                '*-ar71xx-generic-tl-wr941nd-v3-squashfs-sysupgrade.bin',
             ]
         }
     }
@@ -74,8 +74,8 @@ class TPLinkWR941NDv4(TPLinkWR941NDv2):
         'lede': {
             'name': 'tl-wr941nd-v4',
             'files': [
-                '*-ar71xx-tiny-tl-wr941nd-v4-squashfs-factory.bin',
-                '*-ar71xx-tiny-tl-wr941nd-v4-squashfs-sysupgrade.bin',
+                '*-ar71xx-generic-tl-wr941nd-v4-squashfs-factory.bin',
+                '*-ar71xx-generic-tl-wr941nd-v4-squashfs-sysupgrade.bin',
             ]
         }
     }

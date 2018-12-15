@@ -12,7 +12,7 @@ class TPLinkMR3040v1(cgm_devices.DeviceBase):
     name = "MR3040 (v1)"
     manufacturer = "TP-Link"
     url = 'http://www.tp-link.com/'
-    architecture = 'ar71xx_tiny'
+    architecture = 'ar71xx_tiny_17_01'
     usb = True
     radios = [
         cgm_devices.IntegratedRadio('wifi0', _("Integrated wireless radio"), [
@@ -64,8 +64,8 @@ class TPLinkMR3040v1(cgm_devices.DeviceBase):
         'lede': {
             'name': 'tl-mr3040-v1',
             'files': [
-                '*-ar71xx-tiny-tl-mr3040-v1-squashfs-factory.bin',
-                '*-ar71xx-tiny-tl-mr3040-v1-squashfs-sysupgrade.bin'
+                '*-ar71xx-generic-tl-mr3040-v1-squashfs-factory.bin',
+                '*-ar71xx-generic-tl-mr3040-v1-squashfs-sysupgrade.bin'
             ]
         }
     }
@@ -89,8 +89,8 @@ class TPLinkMR3040v2(TPLinkMR3040v1):
         'lede': {
             'name': 'tl-mr3040-v2',
             'files': [
-                '*-ar71xx-tiny-tl-mr3040-v2-squashfs-factory.bin',
-                '*-ar71xx-tiny-tl-mr3040-v2-squashfs-sysupgrade.bin'
+                '*-ar71xx-generic-tl-mr3040-v2-squashfs-factory.bin',
+                '*-ar71xx-generic-tl-mr3040-v2-squashfs-sysupgrade.bin'
             ]
         }
     }
