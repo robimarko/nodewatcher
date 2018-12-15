@@ -804,7 +804,7 @@ def network(node, cfg):
                     # Use BSSID from Mesh as Mesh ID.
                     wif.mesh_id = vif.bssid
                     # Use wpad-mesh instead of wpad-mini/wpad-basic because of 802.11s Mesh.
-                    cfg.packages.update(['-wpad-mini', '-wpad-basic', '-wpad-mesh'])
+                    cfg.packages.update(['-wpad-mini', '-wpad-basic', 'wpad-mesh'])
                 elif vif.mode == 'sta':
                     wif.mode = 'sta'
 
