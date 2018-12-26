@@ -87,6 +87,16 @@ class CilabMeshPointOne(cgm_devices.DeviceBase):
         }
     }
 
+    @cgm_devices.register_module('openwrt')
+    def openwrt_nodewatcher_agent_mod_meshpoint_packages(node, cfg):
+        """
+        Include Nodewatcher agent mod needed to collect sensor data from MeshPoint.
+        """
+
+        cfg.packages.update([
+            'nodewatcher-agent-mod-meshpoint'
+        ])
+
 
 # Register Cilab router devices.
 cgm_base.register_device('lede', CilabMeshPointOne)
