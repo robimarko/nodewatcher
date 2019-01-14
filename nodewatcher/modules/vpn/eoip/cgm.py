@@ -35,5 +35,5 @@ def eoip_config(node, pkgcfg, cfg):
     tunnel.mtu = pkgcfg.mtu
     tunnel.custom_route = pkgcfg.custom_route
 
-    # Ensure that "eoip" package is installed.
-    cfg.packages.update(['eoip'])
+    # Ensure that "eoip" and "ipset" packages are installed.
+    cfg.packages.update(['eoip', 'ipset'])
