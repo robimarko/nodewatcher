@@ -41,11 +41,30 @@ class CilabMeshPointOne(cgm_devices.DeviceBase):
         ])
     ]
     switches = [
+        cgm_devices.Switch(
+            'sw0', "Switch0",
+            ports=[0, 3, 4],
+            cpu_port=0,
+            cpu_tagged=True,
+            vlans=4096,
+            configurable=True,
+            presets=[
+                cgm_devices.SwitchPreset('default', _("Default VLAN configuration"), vlans=[
+                    cgm_devices.SwitchVLANPreset(
+                        'wan0', "Wan0",
+                        vlan=2,
+                        ports=[0, 3],
+                    ),
+                    cgm_devices.SwitchVLANPreset(
+                        'lan0', "Lan0",
+                        vlan=1,
+                        ports=[0, 4],
+                    ),
+                ])
+            ]
+        ),
     ]
-    ports = [
-        cgm_devices.EthernetPort('wan0', "Wan0"),
-        cgm_devices.EthernetPort('lan0', "Lan0"),
-    ]
+    ports = []
     antennas = [
         # TODO: This information is probably not correct
         cgm_devices.InternalAntenna(
@@ -67,8 +86,7 @@ class CilabMeshPointOne(cgm_devices.DeviceBase):
         'openwrt': {
             'wifi0': 'radio0',
             'wifi1': 'radio1',
-            'wan0': 'eth0',
-            'lan0': 'eth1',
+            'sw0': cgm_devices.SwitchPortMap('switch0', vlans='eth0.{vlan}'),
         }
     }
     drivers = {
